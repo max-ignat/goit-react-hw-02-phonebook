@@ -56,7 +56,9 @@ class Form extends Component {
 
   render() {
     const { name, number } = this.state;
-    return (
+      return (
+          <div>
+            <h2>Phone Book</h2>  
       <form onSubmit={this.handleSubmit}>
         <label htmlFor={this.nameInputId}>
           NAME
@@ -89,7 +91,8 @@ class Form extends Component {
         </label>
 
         <button type="submit">Add contact</button>
-      </form>
+              </form>
+              </div>
     );
   }
 }
