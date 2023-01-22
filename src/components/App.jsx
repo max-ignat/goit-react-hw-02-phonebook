@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Box} from '../App.styled'
 import Form from './Form';
 import Contacts from './Contacts';
 import Filter from './Filter';
@@ -56,7 +57,7 @@ class App extends Component {
   };
   render() {
     return (
-      <>
+      <Box>
         <Form submitProp={this.addToContacts} />
         <Filter
           value={this.state.filter}
@@ -65,7 +66,7 @@ class App extends Component {
           contacts={this.filteredContacts()}
           onDeleteContact={this.deleteContact}
         />
-      </>
+      </Box>
     );
   }
 }
